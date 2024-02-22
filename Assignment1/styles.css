@@ -71,6 +71,24 @@ footer{
     margin: 20px;
 }
 
+@media screen and (min-width: 769px){
+    .product-styling tr th{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .product-styling tr th {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-styling tr th {
+        width: 50%;
+    }
+}
+
 .product-styling tr th{
     align-items: center;
     background-color: #f9f9f9;
@@ -80,24 +98,6 @@ footer{
     width: 50%;
 }
 
-@media screen and (min-width: 769px){
-    .product-styling tr th {
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .product-styling tr th {
-        width: 30%;
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-    .product-styling tr th {
-        width: 10%;
-    }
-}
 
 .product-styling tr th:hover{
     background-color: #ffffff;
