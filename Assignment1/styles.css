@@ -127,3 +127,27 @@ footer{
     background-color: #45A049;
     cursor: pointer;
 }
+
+/*Contacts*/
+.contact-info{
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+}
+
+.contact-method{
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+.contact-method a:hover{
+    color: #007BFF;
+}
+
+.contact-method form table tr th{
+    padding: 7px;
+}
