@@ -135,6 +135,7 @@ footer{
     flex-direction: column;
     padding: 20px;
     margin: 20px;
+    border-radius: 10px;
 }
 
 .contact-method{
