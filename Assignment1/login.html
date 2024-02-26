@@ -18,26 +18,24 @@
             <a href="login.html">Login</a>
         </div>
         <br>
-
+        
         <main>
-            <hr>
-            <form>
-                <table>
-                    <tr>
-                        <th><label for="username">Username:</label></th>
-                        <td><input type="text" id="username" name="username" placeholder="Enter you username" required></td>
-                    </tr>
-                    <tr>
-                        <th><label for="password">Password:</label></th>
-                        <td><input type="password" id="password" name="password" placeholder="Enter you password" required></td>                    
-                    </tr>
-                </table>
-                <br>
-                
-                <button>Login</button>
-                <button><a href="">Sign Up</a></button>
-            </form>
+            <section class="login-form">
+                <form>
+                    <label for="username">Username:</label>
+                    <input class="form" type="text" id="username" name="username" placeholder="Enter your username" required> 
+                    <br>
+                    <label for="password">Password:</label>
+                    <div class="password-wrapper">
+                        <input class='form' type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <button class="login-button">Login</button>
+                    </div>
+                    <br>
+                    Don't have an account? <a class="signup" href="">Sign up here! </a>
+                </form>
+            </section>
         </main>
+        
         <br>
         <hr>
 
