@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login Page</title>
+        <title>Sign Up Page</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
@@ -17,8 +17,7 @@
             <a href="contact.html">Contact</a>
             <a href="login.html">Login</a>
         </div>
-        <br>
-        
+
         <main>
             <section class="login-form">
                 <form>
@@ -26,23 +25,26 @@
                     <input class="form" type="text" id="username" name="username" placeholder="Enter your username" required> 
                     <br>
                     <label for="password">Password:</label>
-                    <div class="password-wrapper">
-                        <input class='form' type="password" id="password" name="password" placeholder="Enter your password" required>
-                        <button class="login-button">Login</button>
+                    <input class='form' type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <br>
+                    <label   for="password">Confirm Password:</label>
+                    <input class='form' type="password" id="password" name="password" placeholder="Confirm password" required>
                     </div>
                     <br>
-                    Don't have an account? <a class="signup" href="signup.html">Sign up here! </a>
-
+                    <label for="email">Email:</label>
+                    <div class="password-wrapper">
+                        <input class="form" type="text" id="email" name="email" placeholder="Enter your email" required>
+                        <button class="signup-button">Signup</button>
+                    </div>
+                
                 </form>
-            </section>
+            </section>  
         </main>
-        
-        <br>
 
         <footer>
             <p>© Copyright, Ayodeji Fatokun and Jacelynn Doan</p>
         </footer>
-
     </body>
+    
 
 </html>
