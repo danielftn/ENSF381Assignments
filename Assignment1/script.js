@@ -7,33 +7,42 @@ function validateSignup(event) {
     var email = document.getElementById("email").value;
 
     var isValid = true; 
+    var errorOccured = false;
 
     if (!isValidUsername(username)) {
         displayMessage("Invalid username format.", false);
         isValid = false;
+        errorOccured = true;
     }
 
     if (!isValidPassword(password)) {
         displayMessage("Invalid password format.", false);
         isValid = false;
+        errorOccured = true;
     }
 
     if (password !== confirmPassword) {
         displayMessage("Passwords do not match.", false);
         isValid = false;
+        errorOccured = true;
     }
 
     if (!isValidEmail(email)) {
         displayMessage("Invalid email format.", false);
         isValid = false;
+        errorOccured = true;
     }
-
+    if (errorOccured) {
+        return;
+    }
     if (isValid) {
         displayMessage("Signup successful!", true);
     }
 
     return isValid;
 }
+
+
 
 
 function isValidUsername(username) {
@@ -55,7 +64,7 @@ function displayMessage(message, isSuccess) {
     var messageBox = document.getElementById("messageBox");
     var messageClass = isSuccess ? "success" : "error";
 
-    messageBox.textContent = message;
+    messageBox.textContent += message + ' ';
     messageBox.className = "message-box " + messageClass;
     messageBox.style.display = "block"; 
 }
