@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sign Up Page</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="java.js"></script>
-    </head>
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/barbie.png" width="100px" length="100px" alt="Barbie Image">
+        <p style="font-size: 25px;">DJ Barbie</p>
+    </header>
 
-    <body>
-        <header>
-            <img src="images/barbie.png" width="100px" length="100px" alt="Barbie Image">
-            <p style="font-size: 25px;">DJ Barbie</p>
-        </header>
+    <div class="navigation-bar">
+        <a href="index.html">Homepage</a> 
+        <a href="products.html">Products</a> 
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
 
-        <div class="navigation-bar">
-            <a href="index.html">Homepage</a> 
-            <a href="products.html">Products</a> 
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
-        </div>
+    <main>
+        <section class="login-form">
+            <form onsubmit="return validateSignup(event)">
+                <label for="username">Username:</label>
+                <input class="form" type="text" id="username" name="username" placeholder="Enter your username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input class='form' type="password" id="password" name="password" placeholder="Enter your password" required>
+                <br>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input class='form' type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+                <br>
+                <label for="email">Email:</label>
+                <div class="password-wrapper">
+                    <input class="form" type="text" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-button">Signup</button>
+                </div>
+            </form>
+            <div id="messageBox" class="message-box"></div>
 
-        <main>
-            <section class="login-form">
-                <form>
-                    <label for="username">Username:</label>
-                    <input class="form" type="text" id="username" name="username" placeholder="Enter your username" required>
-                    <br>
-                    <label for="password">Password:</label>
-                    <input class='form' type="password" id="password" name="password" placeholder="Enter your password" required>
-                    <br>
-                    <label   for="password">Confirm Password:</label>
-                    <input class='form' type="password" id="password" name="password" placeholder="Confirm password" required>
-                    </div>
-                    <br>
-                    <label for="email">Email:</label>
-                    <div class="password-wrapper">
-                        <input class="form" type="text" id="email" name="email" placeholder="Enter your email" required>
-                        <button class="signup-button">Signup</button>
-                    </div>
-                
-                </form>
-            </section>  
-        </main>
+    </main>
 
-        <footer>
-            <p>© Copyright, Ayodeji Fatokun and Jacelynn Doan</p>
-        </footer>
-    </body>
-    
-
+    <footer>
+        <p>© Copyright, Ayodeji Fatokun and Jacelynn Doan</p>
+    </footer>
+</body>
 </html>
