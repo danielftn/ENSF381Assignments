@@ -30,9 +30,7 @@ function displayCart() {
     
     cartItems.forEach(item => {
         const itemElement = document.createElement("div");
-        itemElement.innerHTML = `
-            <p>${item.productName} - $${item.price} - Quantity: ${item.quantity} <button onclick="removeFromCart('${item.productName}')">Remove</button></p>
-        `;
+        itemElement.innerHTML = `<p>${item.productName} - $${item.price} - Quantity: ${item.quantity} <button onclick="removeFromCart('${item.productName}')">Remove</button></p>`;
         cartItemsElement.appendChild(itemElement);
     });
 }
