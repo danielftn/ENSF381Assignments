@@ -1,19 +1,36 @@
 function addToCart(productName, price) {
     var cartItems = document.getElementById("cartItems");
-    var cartItem = document.createElement("div");
-    var quantity = 1;
-    
     var existingItem = document.getElementById(productName.replace(/ /g, '_'));
+
     if (existingItem) {
         var quantitySpan = existingItem.querySelector('.quantity');
-        quantity = parseInt(quantitySpan.textContent) + 1;
+        var quantity = parseInt(quantitySpan.textContent) + 1;
         quantitySpan.textContent = quantity;
         alert("Product added to cart!");
         return;
     }
 
-    cartItem.innerHTML = `<p>${productName}: $${price} <span class="quantity">1</span><button class="remove-button" onclick="removeFromCart(this)">Remove</button></p>`;
+    var cartItem = document.createElement("div");
     cartItem.id = productName.replace(/ /g, '_');
+
+    var productParagraph = document.createElement("p");
+    productParagraph.textContent = `${productName}: $${price}`;
+
+    var quantitySpan = document.createElement("span");
+    quantitySpan.textContent = "1";
+    quantitySpan.className = "quantity";
+
+    var removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.className = "remove-button";
+    removeButton.addEventListener("click", function () {
+        removeFromCart(this);
+    });
+
+    productParagraph.appendChild(quantitySpan);
+    productParagraph.appendChild(removeButton);
+
+    cartItem.appendChild(productParagraph);
     cartItems.appendChild(cartItem);
     alert("Product added to cart!");
 }

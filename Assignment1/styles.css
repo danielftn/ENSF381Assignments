@@ -268,8 +268,9 @@ footer{
 
 /*Cart*/
 
-.cart-display {
-    border: 2px solid #000;
+.cart-display h3{
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     margin: 20px;
 }
