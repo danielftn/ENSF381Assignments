@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const users = await response.json();
-      const userExists = users.some((user) => user.username === username);
+      const userExists = users.some((user) => user.username === username && user.email == password);
       
       const messageText = document.createElement("p");
-      messageText.textContent = userExists ?"Login successful" : "Invalid username";
+      messageText.textContent = userExists ?"Login successful" : "Invalid username or Password";
       messageBox.innerHTML = "";
       messageBox.appendChild(messageText);
 
