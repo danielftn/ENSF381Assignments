@@ -64,7 +64,7 @@ function displayMessage(message, isSuccess) {
     var messageBox = document.getElementById("messageBox");
     var messageClass = isSuccess ? "success" : "error";
 
-    messageBox.textContent += message + ' ';
+    messageBox.innerHTML += message + '<br>';
     messageBox.className = "message-box " + messageClass;
     messageBox.style.display = "block"; 
 }

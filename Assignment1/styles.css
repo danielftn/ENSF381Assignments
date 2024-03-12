@@ -258,3 +258,33 @@ footer{
     background-color: #e6ffec;
 }
 
+
+/*Cart*/
+
+.cart-display {
+    border: 2px solid #000;
+    padding: 10px;
+    margin: 20px;
+}
+
+.cart-items {
+    margin-top: 10px;
+}
+
+.remove-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #ff0000; 
+}
+
