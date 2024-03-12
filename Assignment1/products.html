@@ -1,105 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Products</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="product.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/barbie.png" width="100px" length="100px">
+        <p style="font-size: 25px;">DJ Barbie</p>
+    </header>
 
-    <body>
-        <header>
-            <img src="images/barbie.png", width="100px", length="100px">
-            <p style="font-size: 25px;">DJ Barbie</p>
-        </header>
+    <div class="navigation-bar">
+        <a href="index.html">Homepage</a> 
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
 
-        <div class="navigation-bar">
-            <a href="index.html">Homepage</a> 
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
+    <main>
+        <section class="product-list">
+            <table width="100%" cellspacing="20px" class="product-styling">
+                <tr>
+                    <th>
+                        <h4>Beach Boardwalk with Barbie "Brooklyn" & "Malibu" Dolls</h4>
+                        <img src="images/brooklyn&malibu.jpg" width="200px" height="200px">
+                        <p><b>Price: $53.50</b></p>
+                        <p><button onclick="addToCart('Beach Boardwalk with Barbie Dolls', 53.50)">Add to Cart</button></p>
+                    </th>
+
+                    <th>
+                        <h4>Barbie Doll and Playset, Cute 'n' Cozy Cafe</h4>
+                        <img src="images/barbieplayset.jpg" width="200px" height="200px">
+                        <p><b>Price: $54.99</b></p>
+                        <p><button onclick="addToCart('Cute \'n\' Cozy Cafe Playset', 54.99)">Add to Cart</button></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Barbie Toys, Skipper Doll and Snack Bar Playset</h4>
+                        <img src="images/snackbarplayset.jpg" width="200px" height="200px">
+                        <p><b>Price: $34.97</b></p>
+                        <p><button onclick="addToCart('Skipper Doll and Snack Bar Playset', 34.97)">Add to Cart</button></p>
+                    </th>
+
+                    <th>
+                        <h4>Barbie Doll and Playset Supermarket</h4>
+                        <img src="images/supermarketbarbiedoll.jpg" width="200px" height="200px">
+                        <p><b>Price: $61.34</b></p>
+                        <p><button onclick="addToCart('Supermarket Barbie Doll and Playset', 61.34)">Add to Cart</button></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Barbie Gymnastics Doll & Accessories</h4>
+                        <img src="images/Barbie_Gymnastics.jpg" width="200px" height="200px">
+                        <p><b>Price: $49.99</b></p>
+                        <p><button onclick="addToCart('Barbie Gymnastics Doll & Accessories', 49.99)">Add to Cart</button></p>
+                    </th>
+
+                    <th>
+                        <h4>Barbie Science Lab Playset</h4>
+                        <img src="images/Barbie_ScienceLab.jpg" width="200px" height="200px">
+                        <p><b>Price: $38.68</b></p>
+                        <p><button onclick="addToCart('Barbie Science Lab Playset', 38.68)">Add to Cart</button></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Barbie Stacie Doll with Go-Kart</h4>
+                        <img src="images/Barbie_GoKart.jpg" width="200px" height="200px">
+                        <p><b>Price: $29.60</b></p>
+                        <p><button onclick="addToCart('Barbie Stacie Doll with Go-Kart', 29.60)">Add to Cart</button></p>
+                    </th>
+
+                    <th>
+                        <h4>Barbie Kitty Condo Doll and Pets Playset</h4>
+                        <img src="images/Barbie_KittyCondo.jpg" width="200px" height="200px">
+                        <p><b>Price: $24.37</b></p>
+                        <p><button onclick="addToCart('Barbie Kitty Condo Doll and Pets Playset', 24.37)">Add to Cart</button></p>
+                    </th>
+                </tr>
+            </table>
+        </section>
+
+        <div id="cartDisplay" class="cart-display">
+            <h3>Shopping Cart</h3>
+            <div id="cartItems" class="cart-items"></div>
         </div>
-        <br>
-        
-        <main>
-            <form class="product-list">
-                <table width="100%" cellspacing="20px" class="product-styling">
-                    <tr>
-                        <th>
-                            <h4>Beach Boardwalk with Barbie "Brooklyn" & "Malibu" Dolls</h4>
-                            <img src="images/brooklyn&malibu.jpg" width="200px" height="200px">
-                            <p><b>Price: $53.50</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
+    </main>
 
-                        <th>
-                            <h4>Barbie Doll and Playset, Cute 'n' Cozy Cafe</h4>
-                            <img src="images/barbieplayset.jpg" width="200px" height="200px">
-                            <p><b>Price: $54.99</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
-                    
-                    </tr>
-                    
-                    <tr>
-                        <th>
-                            <h4>Barbie Toys, Skipper Doll and Snack Bar Playset</h4>
-                            <img src="images/snackbarplayset.jpg" width="200px" height="200px">
-                            <p><b>Price: $34.97</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
+    <footer>
+        <p>© Copyright, Ayodeji Fatokun and Jacelynn Doan</p>
+    </footer>
 
-                        <th>
-                            <h4>Barbie Doll and Playset Supermarket</h4>
-                            <img src="images/supermarketbarbiedoll.jpg" width="200px" height="200px">
-                            <p><b>Price: $61.34</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
-                    </tr>
-
-                    <tr>
-                        <th>
-                            <h4>Barbie Gymnastics Doll & Accessories</h4>
-                            <img src="images/Barbie_Gymnastics.jpg" width="200px" height="200px">
-                            <p><b>Price: $49.99</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
-
-                        <th>
-                            <h4>Barbie Science Lab Playset</h4>
-                            <img src="images/Barbie_ScienceLab.jpg" width="200px" height="200px">
-                            <p><b>Price: $38.68</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
-                    </tr>
-
-                    <tr>
-                        <th>
-                            <h4>Barbie Stacie Doll with Go-Kart</h4>
-                            <img src="images/Barbie_GoKart.jpg" width="200px" height="200px">
-                            <p><b>Price: $29.60</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
-
-                        <th>
-                            <h4>Barbie Kitty Condo Doll and Pets Playset</h4>
-                            <img src="images/Barbie_KittyCondo.jpg" width="200px" height="200px">
-                            <p><b>Price: $24.37</b></p>
-                            <p><button>Add to Cart</button></p>
-                        </th>
-                    </tr>
-                    
-                </table>
-                <div id="cartDisplay" class="cart-display">
-                    <h3>Shopping Cart</h3>
-                    <div id="cartItems" class="cart-items"></div>
-                </div>
-            </form>
-        </main>
-
-        <footer>
-            <p>© Copyright, Ayodeji Fatokun and Jacelynn Doan</p>
-        </footer>
-        
-
-    </body>
-
+</body>
 </html>

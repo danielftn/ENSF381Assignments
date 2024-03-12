@@ -268,9 +268,9 @@ footer{
 
 /*Cart*/
 
-.cart-display h3{
-    align-items: center;
-    justify-content: center;
+.cart-display {
+    border: 2px solid #000;
+    background-color: #f9f9f9;
     padding: 10px;
     margin: 20px;
 }
@@ -280,7 +280,7 @@ footer{
 }
 
 .remove-button {
-    background-color: #4CAF50;
+    background-color: #4CAF50;  
     border: none;
     color: white;
     padding: 5px 10px;
@@ -293,6 +293,5 @@ footer{
 }
 
 .remove-button:hover {
-    background-color: #ff0000; 
+    background-color: #ff0000;
 }
-
