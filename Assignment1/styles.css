@@ -240,25 +240,7 @@ footer{
     opacity: 1.0;
 }
 
-/* invalid input */
-.message-box {
-    display: none;
-    border: 2px solid transparent;
-    padding: 10px;
-    margin: 20px;
-}
-
-.message-box.error {
-    border-color: red;
-    background-color: #ffecec;
-}
-
-.message-box.success {
-    border-color: #2ecc71;
-    background-color: #e6ffec;
-}
-
-/*Login*/
+/*Login and Signup*/
 .messagebox{
     border: 2px;
     background-color: #f9f9f9;

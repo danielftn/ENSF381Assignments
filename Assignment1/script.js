@@ -10,25 +10,25 @@ function validateSignup(event) {
     var errorOccured = false;
 
     if (!isValidUsername(username)) {
-        displayMessage("Invalid username format.", false);
+        displayMessage("Invalid username format.");
         isValid = false;
         errorOccured = true;
     }
 
     if (!isValidPassword(password)) {
-        displayMessage("Invalid password format.", false);
+        displayMessage("Invalid password format.");
         isValid = false;
         errorOccured = true;
     }
 
     if (password !== confirmPassword) {
-        displayMessage("Passwords do not match.", false);
+        displayMessage("Passwords do not match.");
         isValid = false;
         errorOccured = true;
     }
 
     if (!isValidEmail(email)) {
-        displayMessage("Invalid email format.", false);
+        displayMessage("Invalid email format.");
         isValid = false;
         errorOccured = true;
     }
@@ -36,13 +36,11 @@ function validateSignup(event) {
         return;
     }
     if (isValid) {
-        displayMessage("Signup successful!", true);
+        displayMessage("Signup successful!");
     }
 
     return isValid;
 }
-
-
 
 
 function isValidUsername(username) {
@@ -60,11 +58,9 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-function displayMessage(message, isSuccess) {
+function displayMessage(message) {
     var messageBox = document.getElementById("messageBox");
-    var messageClass = isSuccess ? "success" : "error";
-
     messageBox.innerHTML += message + '<br>';
-    messageBox.className = "message-box " + messageClass;
+    messageBox.className = "messagebox";
     messageBox.style.display = "block"; 
 }
