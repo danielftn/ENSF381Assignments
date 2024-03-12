@@ -18,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const userExists = data.some((user) => user.username === username);
   
           const messageText = document.createElement("p");
-          messageText.textContent = userExists
-            ? "Login successful"
-            : "Invalid username";
+          messageText.textContent = userExists ?"Login successful" : "Invalid username";
           messageBox.innerHTML = "";
           messageBox.appendChild(messageText);
         })
