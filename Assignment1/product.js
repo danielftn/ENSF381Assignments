@@ -18,7 +18,11 @@ function removeFromCart(productName) {
     const index = cartItems.findIndex(item => item.productName === productName);
     
     if (index !== -1) {
-        cartItems.splice(index, 1);
+        cartItems[index].quantity--;
+
+        if (cartItems[index].quantity <= 0) {
+            cartItems.splice(index, 1);
+        }
     }
     
     displayCart();
